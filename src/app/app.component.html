@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <h1 class="myToDo">My to-do app</h1>
+  <div class="colums">
+    <div class="part1">
+      <p>Add new task</p>
+      <div class="createcontainer">
+        <input type="text" placeholder="Add New Task" #newTask>
+        <button (click)="onPlus(newTask.value)"><i class="fa fa-plus"></i></button>
+      </div>
+      <ul>
+        <li *ngFor="let item of todo" (click)="onMoveToDone(item.id)">
+          <span (click)="onTodoDelete(item.id)"><i class="fa fa-trash"></i></span> {{item.text}}
+        </li>
+      </ul>
+    </div>
+    <div class="part2">
+      <p>Done</p>
+      <ul>
+        <li *ngFor="let item of done">
+          <span (click)="onDoneDelete(item.id)"><i class="fa fa-trash"></i></span> {{item.text}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

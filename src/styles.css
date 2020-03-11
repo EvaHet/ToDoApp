@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #fefdfe;
+  background: -webkit-linear-gradient(to left, #fefdfe, #cbcfec);
+  background: linear-gradient(to left, #fefdfe, #cbcfec);
+}
